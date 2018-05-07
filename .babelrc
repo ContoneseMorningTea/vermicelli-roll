@@ -1,8 +1,17 @@
 {
-  "presets": ["babel-preset-expo"],
-  "env": {
-    "development": {
-      "plugins": ["transform-react-jsx-source"]
-    }
-  }
+  "presets": ["react-native"],
+  "plugins": [
+    "transform-decorators-legacy",
+    ["module-resolver", {
+      "alias": {
+        "assets": "friday/assets",
+        "@": "friday/src/components",
+        "router": "friday/src/router",
+        "store": "friday/src/store",
+        "utils": "friday/src/utils",
+        "view": "friday/src/view"
+      },
+      "extensions": [".js", ".jsx"]
+    }]
+  ]
 }
